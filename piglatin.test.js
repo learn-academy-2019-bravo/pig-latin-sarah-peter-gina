@@ -5,12 +5,15 @@
 // console.log(splitString);
 // console.log(splitWord);
 //tests to make sure test string is divided into an array
-var teststring = " school heart this quail is chart bart cart having charleaston heart psimon dhggul fgfgfol squeal"
+// var teststring = "school heart this quail is chart bart cart having charleaston heart psimon dhggul fgfgfol squeal"
+// var string = document.getElementById('texttochange').value
+
 const piglatin = () => {
-    var str = document.getElementById('text-to-change').value
+    var str = document.getElementById('texttochange').value
     var wordArray = str.split(" ")
     var vowels = ["a", "e", "i", "o", "u"]
     var newArr = []
+    // var display = document.getElementById('outputForpigLatin')
 // console.log(wordArray)
     for (let i=0; i<wordArray.length; i++) {
         // var letterArray = wordArray[i].split("")
@@ -57,11 +60,15 @@ const piglatin = () => {
             //         var lastLtrs = wordArray[i].slice(num)
             //         newArr.push(lastLtrs + firstLtrs +"ay")
                 // }
-    } return newArr.join(' ')
-    document.getElementById('outputForpigLatin').innerHTML = newArr
+    }
+    newString = newArr.join(' ')
+    return newString
+    display.innerHTML = newString
 }
 
-console.log(piglatin(teststring));
+// console.log(piglatin(teststring));
+
+// console.log(piglatin(teststring));
 
 
 
