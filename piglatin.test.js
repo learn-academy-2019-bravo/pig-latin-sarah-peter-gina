@@ -1,13 +1,3 @@
-// var teststring = "this quail is chart bart cart charleaston"
-
-// var wordArray = teststring.split(" ")
-
-// console.log(splitString);
-// console.log(splitWord);
-//tests to make sure test string is divided into an array
-// var teststring = "school heart this quail is chart bart cart having charleaston heart psimon dhggul fgfgfol squeal"
-// var string = document.getElementById('texttochange').value
-
 const piglatin = () => {
     var str = document.getElementById('texttochange').value
     var wordArray = str.split(" ")
@@ -63,7 +53,7 @@ const piglatin = () => {
     }
     newString = newArr.join(' ')
     return newString
-    display.innerHTML = newString
+    document.getElementById('outputForpigLatin').innerHTML = newString
 }
 
 // console.log(piglatin(teststring));
@@ -80,3 +70,13 @@ const piglatin = () => {
 
 
 // if (wordArray[i].charAt(i) === 'a' || wordArray[i].charAt(i) === 'e' || wordArray[i].charAt(i) === 'i' || wordArray[i].charAt(i) === 'o' || wordArray[i].charAt(i) === 'u')
+
+// var teststring = "this quail is chart bart cart charleaston"
+
+// var wordArray = teststring.split(" ")
+
+// console.log(splitString);
+// console.log(splitWord);
+//tests to make sure test string is divided into an array
+// var teststring = "school heart this quail is chart bart cart having charleaston heart psimon dhggul fgfgfol squeal"
+// var string = document.getElementById('texttochange').value
