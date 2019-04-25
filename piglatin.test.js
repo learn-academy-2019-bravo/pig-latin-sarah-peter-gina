@@ -16,6 +16,11 @@ const piglatin = () => {
         } else if (wordArray[i].indexOf("q") === 1 && wordArray[i].indexOf("u") === 2) {
             var newQ2 = wordArray[i].slice(3)
             newArr.push(newQ2 + wordArray[i].charAt(0) + "quay")
+        } else if (wordArray[i].indexOf("y") != 0 && wordArray[i].indexOf("y") < wordArray[i].indexOf("a") && wordArray[i].indexOf("y") < wordArray[i].indexOf("e") && wordArray[i].indexOf("y") < wordArray[i].indexOf("i") && wordArray[i].indexOf("y") < wordArray[i].indexOf("o") && wordArray[i].indexOf("y") < wordArray[i].indexOf("u")) {
+            var firstLtrs = wordArray[i].slice(0, wordArray[i].indexOf("y"))
+                  // console.log(slicedSearch);
+                  var lastLtrs = wordArray[i].slice(wordArray[i].indexOf("y"))
+                  newArr.push(lastLtrs + firstLtrs + "ay")
         } else if (wordArray[i].indexOf("a") === 1 || wordArray[i].indexOf("e") === 1 || wordArray[i].indexOf("i") === 1|| wordArray[i].indexOf("o") === 1 || wordArray[i].indexOf("u") === 1) {
             var firstLtrs = wordArray[i].slice(0, 1)
                     // console.log(slicedSearch);
