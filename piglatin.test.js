@@ -13,6 +13,9 @@ const piglatin = () => {
         } else if (wordArray[i].indexOf("q") === 0 && wordArray[i].indexOf("u") === 1) {
             var newQ = wordArray[i].slice(2)
             newArr.push(newQ.concat("quay"))
+        } else if (wordArray[i].indexOf("q") === 1 && wordArray[i].indexOf("u") === 2) {
+            var newQ2 = wordArray[i].slice(3)
+            newArr.push(newQ2 + wordArray[i].charAt(0) + "quay")
         } else if (wordArray[i].indexOf("a") === 1 || wordArray[i].indexOf("e") === 1 || wordArray[i].indexOf("i") === 1|| wordArray[i].indexOf("o") === 1 || wordArray[i].indexOf("u") === 1) {
             var firstLtrs = wordArray[i].slice(0, 1)
                     // console.log(slicedSearch);
@@ -52,8 +55,8 @@ const piglatin = () => {
                 // }
     }
     newString = newArr.join(' ')
-    return newString
     document.getElementById('outputForpigLatin').innerHTML = newString
+    return newString
 }
 
 // console.log(piglatin(teststring));

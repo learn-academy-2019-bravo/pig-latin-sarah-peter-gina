@@ -7,8 +7,29 @@
         <script type="text/javascript" src="piglatin.test.js"></script>
     </head>
     <body>
-        <input type="text" id="texttochange">
-        <button type="button" id="button" onclick="piglatin();">CLICK ME</button>
-        <output id="outputForpigLatin"></output>
+        <div class="container">
+            <h1 class="pagetitle">Pig Latin Translator</h1>
+            <input type="text" id="texttochange">
+            <button type="button" id="button" onclick="piglatin(),play()">CLICK ME</button>
+            <br><br><br>
+            <output id="outputForpigLatin"></output><br>
+            <ul id="rules">
+                <li>For words beginning with a vowel, add "way" to the end.
+                </li>
+                <li>For words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay".
+                </li>
+                <li>
+                    If the first consonants include "qu", move the "u" along with the "q".
+                    <li>For words beginning with "y", treat "y" as a consonant.</li>
+                </li>
+            </ul>
+            <script>
+                function play(){
+                 var audio = document.getElementById("audio");
+                 audio.play();
+               }
+            </script>
+            <audio id="audio" src="pig-noise.wav" ></audio>
+        </div>
     </body>
 </html>
